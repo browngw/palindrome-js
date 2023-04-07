@@ -31,7 +31,8 @@ function Phrase(content) {
 
   // Returns the letters in the content
   this.letters = function letters() {
-    return (this.content.match(/[a-z]/gi) || []).join("");
+    const letterRegex = /[a-z]/gi;
+    return (this.content.match(letterRegex) || ["error"]).join("");
 
     // // 2nd solution
     // return Array.from(this.content).filter(c => c.match(/[a-z]/i)).join("");

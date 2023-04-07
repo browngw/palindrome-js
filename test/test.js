@@ -26,9 +26,9 @@ describe("Phrase", function() {
       assert(punctuatedPalidrome.palindrome());
     });
 
-    it("should return true for a null phrase", function() {
-      let nullPalidrome = new Phrase("");
-      assert(nullPalidrome.palindrome());
+    it("should return false for a null phrase", function() {
+      let nullPalidrome = new Phrase("1234.56");
+      assert(!nullPalidrome.palindrome());
     });
 
   });
